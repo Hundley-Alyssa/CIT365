@@ -46,14 +46,14 @@ namespace Math_Quiz
             multiplier = randomizer.Next(2, 11);
             timesLeftLabel.Text = multiplicand.ToString();
             timesRightLabel.Text = multiplier.ToString();
-            label99.Value = 0;
+           product.Value = 0;
 
             divisor = randomizer.Next(2, 11);
             int temporaryQuotient = randomizer.Next(2, 11);
             dividend = divisor * temporaryQuotient;
             dividendLeftLabel.Text = dividend.ToString();
             dividendRightLabel.Text = divisor.ToString();
-            label100.Value = 0;
+            quotient.Value = 0;
            
             timeLeft = 30;
             timeLabel.Text = "30 seconds";
@@ -118,6 +118,10 @@ namespace Math_Quiz
             }
         }
 
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string date = System.DateTime.Today.ToString("dd/MM/yy");
+            
+        }
     }
 }
